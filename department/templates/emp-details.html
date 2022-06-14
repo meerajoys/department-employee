@@ -1,0 +1,25 @@
+{%extends 'base.html'%}
+{%block body_block%}
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+
+                 <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                    <h5 class="card-title">Name:{{emp.ename}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Designation:{{emp.designation}}</h6>
+                        <p class="card-text">Department:{{emp.department}}</p>
+
+                        <p class="card-text">Email:{{emp.email}}</p>
+                        <p class="card-text">Phone No:{{emp.phone}}</p>
+
+                    <p class="card-text">Address:{{emp.address}}</p>
+
+                    </div>
+                 </div>
+
+
+        </div>
+        <div class="col-4"></div>
+    </div>
+{%endblock%}

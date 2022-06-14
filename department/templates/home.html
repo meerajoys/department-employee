@@ -1,0 +1,13 @@
+{%extends 'base.html'%}
+{%block body_block%}
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4 mt-5" >
+
+            <a href="{%url 'dept-list'%}" class="btn btn-success btn-lg">DEPARTMENTS</a>
+            <a href="{%url 'emp-list'%}" class="btn btn-success btn-lg">EMPLOYEES</a>
+
+        </div>
+        <div class="col-4"></div>
+    </div>
+{%endblock%}

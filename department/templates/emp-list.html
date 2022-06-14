@@ -1,0 +1,38 @@
+{%extends 'base.html'%}
+{%block body_block%}
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+
+            <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">NAME</th>
+      <th scope="col">DESIGNATION</th>
+      <th scope="col">DEPARTMENT</th>
+    </tr>
+  </thead>
+       {%for emp in emplist%}
+  <tbody>
+    <tr>
+      <th scope="row">{{emp.id}}</th>
+      <td>{{emp.ename}}</td>
+      <td>{{emp.designation}}</td>
+      <td>{{emp.department}}</td>
+        <td><a href="{%url 'emp-details' emp.id%}" class="btn btn-outline-success">View</a></td>
+        <td><a href="{%url 'emp-edit' emp.id%}" class="btn btn-outline-primary">Edit</a></td>
+        <td><a href="{%url 'emp-delete' emp.id%}" class="btn btn-outline-danger">Delete</a></td>
+    </tr>
+
+  </tbody>
+
+                 {%endfor%}
+</table>
+
+
+
+        </div>
+        <div class="col-2"></div>
+    </div>
+{%endblock%}
